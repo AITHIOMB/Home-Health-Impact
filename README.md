@@ -7,10 +7,10 @@ Excel
 SQL
 VSCode
 
-Team Members: 
+Team Members: <br>
 Aissatou Thiombane(She/Her) <br>
-Andres Vicente(he/him)
-Bonnie White (She/Her)
-Nicole Escamilla (she/her)
-Reshma Sheikh(she/her)
+Andres Vicente(he/him) <br>
+Bonnie White (She/Her) <br>
+Nicole Escamilla (she/her)<br>
+Reshma Sheikh(she/her)<br>
 
