@@ -8,3 +8,9 @@ SQL
 VSCode
 
 Team Members: 
+Aissatou Thiombane(She/Her)
+Andres Vicente(he/him)
+Bonnie White (She/Her)
+Nicole Escamilla (she/her)
+Reshma Sheikh(she/her)
+
