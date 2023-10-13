@@ -56,24 +56,28 @@ zeroValues = ['ND','<1','nd','N/D','N D','Nd', 'Hhh', 'nan',
                'o', 'BD','NaN', 'N d','ND,<2','1<']
 
 def oneHotEncodeSymptoms(symptomDF):
-    # For every column in symptom DF columns, find all unique comma separated symptoms and add them to a list 
+    # For every column in symptom DF columns, looking at each row value find all unique comma separated symptoms and add them to a list 
     for column in symptomDF.columns:
-        systemSymptomList = (df[column].dropna()   # Drop any remaining NaNs (though there shouldn't be any after fillna)
-                        .replace('', '0')    # Replace empty strings with '0'
+        systemSymptomList = (df[column]
+                        .dropna()   # Drop any remaining NaNs (though there shouldn't be any after fillna)
+                        #.replace('', '0')    # Replace empty strings with '0'
                         .str.lower()         # Convert to lowercase
                         .str.replace(" ", "") # Remove spaces
                         .str.split(',')      # Split by commas
                         .explode()           # Explode lists to rows
-                        .loc[lambda x: x != '0'] # Filter out '0' values
-                        .dropna()            # Drop any remaining NaNs (though there shouldn't be any after fillna)
+                       # .loc[lambda x: x != '0'] # Filter out '0' values
                         .unique())           # Get unique values
-            
+        '''  
         for j in systemSymptomList:
             newColumn = str(i) + "_" + str(j)
             df[newColumn] = df[i].apply(lambda x: 1 if j in str(x).lower().replace(" ", "") else 0)
-        systemSymptomList = []
-    return df
+        systemSymptomList = []''' 
+        print(systemSymptomList)
+        break
+    return ""
 
+
+#TODO: Found that candidiasis(ie etc...) value causing issues in making more columns than needed 
 
 # Read the Original WeInspect B CSV Data file 
 df = pd.read_csv('WeInspectB.csv')
@@ -123,8 +127,8 @@ print("_____________________________________")
 
 # One Hot Encoding Symptoms 
 print("One Hot Encoding Symptom DF, Inital Columns: ", len(symptomDF.columns))
-#symptomDF = oneHotEncodeSymptoms(symptomDF)
-print("One Hot Encoded Columns: ", len(symptomDF.columns))
+symptomDF = oneHotEncodeSymptoms(symptomDF)
+#print("One Hot Encoded Columns: ", len(symptomDF.columns))
 print("_____________________________________")
 
 
