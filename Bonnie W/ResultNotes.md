@@ -23,5 +23,8 @@ Observations
 
 ## 2. X = Molds
 - Depending on the results of this, we will determine if location matters, if so, we will do new PCA with adjustments 
+- 44% still bad, try a new model and check in with swagath over results
+
+![Alt text](image-2.png)
 
 # 
