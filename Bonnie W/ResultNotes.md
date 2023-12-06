@@ -16,7 +16,10 @@ Other Models to try
 - Neural Network 
 
 
-![Alt text](image.png)
+![Alt text](image-1.png)
+
+Observations
+- 44% accuracy 
 
 ## 2. X = Molds
 - Depending on the results of this, we will determine if location matters, if so, we will do new PCA with adjustments 
