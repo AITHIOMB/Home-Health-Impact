@@ -11,6 +11,7 @@ Other Models to try
 
 # 1. SVC Molds 
 Less than 60% Accuracy between all location and mold combos & 70-90% variance
+
 ## With Location 
 - PCA done with numerical category locations
 - PCA scale not adjusted
@@ -18,9 +19,25 @@ Less than 60% Accuracy between all location and mold combos & 70-90% variance
 ![Alt text](image-1.png)
 
     Results
-- 90% variance {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}: 56%
+- 90% variance {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}: 57%
+
 ![Alt text](image-5.png)
 - 80% variance {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}: 56% accuracy 
+
+Adding multi label predictions seem to drop the model even more: 45%
+![Alt text](image-8.png)
+
+With full brain symptoms: 
+Accuracy: 46.7% 
+![Alt text](image-9.png)
+
+With just Brain_anger/aggresiveness 
+Accuracy: 75%
+![Alt text](image-10.png)
+
+something weird with the confusion matrix here, may be a mistake 
+
+Yea stil seems not very sucessful
 
 ## Without Location
 - Depending on the results of this, we will determine if location matters, if so, we will do new PCA with adjustments 
@@ -50,6 +67,19 @@ Confusion Matrix with Best Estimator:<br>
 [[42 28]<br>
  [50 46]]
 
+ With all symptoms doing multilabel classification
+
+ 
+
+All symptoms 
+Accuracy 56%
+    
+## Without Location
+Results
+- 50 - 54% Accuracy
+- really not much difference between the two
+![Alt text](image-3.png)
+
  Honing more in on n_estimator parameters, testing more 
  ![Alt text](image-7.png)
  odd, it went down but went back up when it raised, trying again
@@ -63,15 +93,6 @@ Confusion Matrix with Best Estimator:<br>
 seems to not have a consistent difference in performance. Pattern seems random 
 
 Seems to not be a very fruitful model. Going to try out more
-
-
-
-    
-## Without Location
-Results
-- 50 - 54% Accuracy
-- really not much difference between the two
-![Alt text](image-3.png)
 
 # 3. CNN 
 
