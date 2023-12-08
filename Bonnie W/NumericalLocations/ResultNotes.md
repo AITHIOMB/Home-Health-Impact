@@ -96,5 +96,15 @@ Seems to not be a very fruitful model. Going to try out more
 
 # 3. CNN 
 
-# 4. GBM
+According to my research this works mostly for image data so I will use FCCN 
+
+I got 86% Accuracy?? 
+
+![Alt text](image-11.png)
+
+Gonna check everything first
+
+# 4. FCNN 
+
+# 5. GBM
 
