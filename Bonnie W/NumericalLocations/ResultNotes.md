@@ -94,17 +94,55 @@ seems to not have a consistent difference in performance. Pattern seems random
 
 Seems to not be a very fruitful model. Going to try out more
 
-# 3. CNN 
+# 3. FCNN 
 
 According to my research this works mostly for image data so I will use FCCN 
 
+## Brain Symptoms 
+
+```# Define the model
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(y_train.shape[1], activation='softmax'))  # Output layer with softmax
+
+# Compile the model
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# Train the model
+model.fit(X_train, y_train, epochs=10, batch_size=32)
+```
+
 I got 86% Accuracy?? 
 
-![Alt text](image-11.png)
+86 - 92% range
+
+80/90% for non location, location seems to still not make much of a difference 
+
+noticing this one is consistently high values
+
+84% - 92% Range
+
+![Alt text](image-12.png)
 
 Gonna check everything first
+## Nervous System
+Checking with Nervous system 
+A little lower but not bad 
+50 -70% range 
 
-# 4. FCNN 
+even worse very unfitted
+![Alt text](image-15.png)
+## All
 
-# 5. GBM
+Gonna try it with all: 
+ok when with all symptoms it went to 0 so I am going to play around more 
+
+im noticing that as output labels increase, accuracy lowers. So the more complex the dataset the more complex the neural network should be 
+
+For all others, it randomly jumps as low as 28 - 70 % 
+
+
+
+# 4. GBM
 
