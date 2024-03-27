@@ -1,5 +1,6 @@
 # Project Description
 Break Through Tech UCLA x We Inspect Fall AI Studio: Home Health Machine Learning Project <br>
+
 Research & findings for constructing and testing multiple ML models that are able to detect correlations between mold types and associated symptoms, enabling predictive insights into likely health outcomes.
 
 # Tools
